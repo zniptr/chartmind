@@ -1,0 +1,45 @@
+{
+  "name": "chartmind",
+  "version": "1.0.0",
+  "description": "Flowchart execution engine for drawio charts",
+  "main": "build/src/index.js",
+  "module": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
+  },
+  "keywords": [
+    "flow",
+    "chart",
+    "drawio",
+    "draw",
+    "diagram",
+    "engine"
+  ],
+  "author": "Timo Martin",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "gts": "^6.0.2",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  },
+  "files": [
+    "build"
+  ],
+  "engines": {
+    "node": ">=10.10.0"
+  }
+}

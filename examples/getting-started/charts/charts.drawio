@@ -1,0 +1,41 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Test Chart" id="lmtbddm9dr6RJ5coVrX0">
+    <mxGraphModel dx="925" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Start" type="start" id="mgWU4WGA2wBzqPDC1BhA-1">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="179" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="End" type="end" id="mgWU4WGA2wBzqPDC1BhA-2">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="599" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Increment counter" type="process" executable="increment-counter" id="mgWU4WGA2wBzqPDC1BhA-3">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+            <mxGeometry x="359" y="550" width="126" height="70" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="mgWU4WGA2wBzqPDC1BhA-4">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mgWU4WGA2wBzqPDC1BhA-1" target="mgWU4WGA2wBzqPDC1BhA-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="389" y="580" as="sourcePoint" />
+              <mxPoint x="339" y="630" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="mgWU4WGA2wBzqPDC1BhA-5">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mgWU4WGA2wBzqPDC1BhA-3" target="mgWU4WGA2wBzqPDC1BhA-2">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="389" y="580" as="sourcePoint" />
+              <mxPoint x="579" y="510" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

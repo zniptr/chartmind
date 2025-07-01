@@ -1,0 +1,293 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9" pages="7">
+  <diagram id="xLyr2SOq8-H1Ja53Bvy_" name="Test1">
+    <mxGraphModel dx="2037" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Start 1" type="start" id="DpZz-iEFYs7LoEzythDQ-1">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="284" y="500" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Start 2" type="start" id="DpZz-iEFYs7LoEzythDQ-2">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="284" y="620" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="end" id="z-6mdKKIaUdHC0AQ0xdX-1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="494" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="z-6mdKKIaUdHC0AQ0xdX-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DpZz-iEFYs7LoEzythDQ-1" target="z-6mdKKIaUdHC0AQ0xdX-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="584" y="730" as="sourcePoint" />
+              <mxPoint x="524" y="460" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="z-6mdKKIaUdHC0AQ0xdX-3">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DpZz-iEFYs7LoEzythDQ-2" target="z-6mdKKIaUdHC0AQ0xdX-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="584" y="730" as="sourcePoint" />
+              <mxPoint x="674" y="730" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="jjgmC8upbYhDTiesCwud" name="Test2">
+    <mxGraphModel dx="2377" dy="1458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Process" type="process" executable="" id="sngXJWHNheVRulAhI0OG-3">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+            <mxGeometry x="494" y="550" width="126" height="70" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Predefined process" type="predefined" name="Test.drawio" id="sngXJWHNheVRulAhI0OG-4">
+          <mxCell style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;strokeWidth=2;labelPosition=center;align=center;" parent="1" vertex="1">
+            <mxGeometry x="254" y="550.0000000000001" width="126" height="70" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-5">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.145;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="sngXJWHNheVRulAhI0OG-15" edge="1" target="sngXJWHNheVRulAhI0OG-4">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="84" y="670" as="sourcePoint" />
+              <mxPoint x="101" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-7">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=0.145;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="sngXJWHNheVRulAhI0OG-15" edge="1" target="sngXJWHNheVRulAhI0OG-4">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="144" y="650" as="sourcePoint" />
+              <mxPoint x="137" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-8">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="sngXJWHNheVRulAhI0OG-4" edge="1" target="sngXJWHNheVRulAhI0OG-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="285" y="670" as="sourcePoint" />
+              <mxPoint x="285" y="740" as="targetPoint" />
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-13">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.145;entryY=0.855;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="sngXJWHNheVRulAhI0OG-3" edge="1" target="iAkUPEG0yKN-QvL0vk6s-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="484" y="660" as="sourcePoint" />
+              <mxPoint x="525" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-14">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.145;entryY=0.145;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="iAkUPEG0yKN-QvL0vk6s-1" source="sngXJWHNheVRulAhI0OG-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="674" y="630" as="sourcePoint" />
+              <mxPoint x="588" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Start" type="start" id="sngXJWHNheVRulAhI0OG-15">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
+            <mxGeometry x="94" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="sngXJWHNheVRulAhI0OG-16">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="sngXJWHNheVRulAhI0OG-4" edge="1" target="sngXJWHNheVRulAhI0OG-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="348" y="650" as="sourcePoint" />
+              <mxPoint x="348" y="740" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="End" type="end" id="iAkUPEG0yKN-QvL0vk6s-1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="684" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="XfkVtGSN0wLiWCGzj3D4" name="Test3">
+    <mxGraphModel dx="1426" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="End" type="end" id="xQ4v1eYItiQMTjMBUqre-1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="315" y="725" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Decision" type="decision" id="xQ4v1eYItiQMTjMBUqre-2">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="310" y="615" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Predefined process" type="predefined" name="Test.drawio" id="xQ4v1eYItiQMTjMBUqre-3">
+          <mxCell style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;strokeWidth=2;labelPosition=center;align=center;" vertex="1" parent="1">
+            <mxGeometry x="277" y="395.0000000000001" width="126" height="70" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Process" type="process" executable="" id="vAlLMXJfzuhN96UZK91u-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+            <mxGeometry x="277" y="495" width="126" height="70" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="6Er76stNecs_HMKPLaRS-1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xQ4v1eYItiQMTjMBUqre-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="460" y="665" as="sourcePoint" />
+              <mxPoint x="550" y="430" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="6Er76stNecs_HMKPLaRS-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="vAlLMXJfzuhN96UZK91u-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="410" y="535" as="sourcePoint" />
+              <mxPoint x="550" y="530" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="6Er76stNecs_HMKPLaRS-3">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="xQ4v1eYItiQMTjMBUqre-2">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="460" y="665" as="sourcePoint" />
+              <mxPoint x="540" y="645" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="6Er76stNecs_HMKPLaRS-4">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="xQ4v1eYItiQMTjMBUqre-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="460" y="665" as="sourcePoint" />
+              <mxPoint x="540" y="750" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n4pLYHkS7xV_HaE7RD5O" name="Test4">
+    <mxGraphModel dx="1501" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Decision" type="decision" id="bPHgrkVN3AkPp47L8Y6K-3">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="476" y="555" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="i0ZKws3OVwQaIMxNlv1Z-1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="i0ZKws3OVwQaIMxNlv1Z-3" target="bPHgrkVN3AkPp47L8Y6K-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="462" y="640" as="sourcePoint" />
+              <mxPoint x="552" y="640" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Start" type="start" id="i0ZKws3OVwQaIMxNlv1Z-3">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="292" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="GnVMXENBVqk_Q1tQouAA" name="Test5">
+    <mxGraphModel dx="1188" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="End 1" type="end" id="dbotIoL0WIt3rI1pVFap-1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="284" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="dbotIoL0WIt3rI1pVFap-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="dbotIoL0WIt3rI1pVFap-1" target="dbotIoL0WIt3rI1pVFap-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="364" y="610" as="sourcePoint" />
+              <mxPoint x="464" y="585" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="End 2" type="end" id="dbotIoL0WIt3rI1pVFap-3">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="494" y="560" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="LjqxnyUYnT38sryhAG8o" name="Test6">
+    <mxGraphModel dx="1426" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Decision" type="decision" id="1_TJmmYgCEf_zq_Vh5be-1">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="380" y="420" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Start" type="start" id="1_TJmmYgCEf_zq_Vh5be-2">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="180" y="425" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="lF98CW-TMfDJ9zozMVr2-1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1_TJmmYgCEf_zq_Vh5be-2" target="1_TJmmYgCEf_zq_Vh5be-1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="370" y="450" as="sourcePoint" />
+              <mxPoint x="370" y="420" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="lF98CW-TMfDJ9zozMVr2-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1_TJmmYgCEf_zq_Vh5be-1" target="lF98CW-TMfDJ9zozMVr2-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="430" y="300" as="sourcePoint" />
+              <mxPoint x="410" y="290" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="End" type="end" id="lF98CW-TMfDJ9zozMVr2-3">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+            <mxGeometry x="600" y="425" width="50" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" condition="" default="" type="connection" id="lF98CW-TMfDJ9zozMVr2-4">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="1_TJmmYgCEf_zq_Vh5be-1" target="lF98CW-TMfDJ9zozMVr2-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="370" y="450" as="sourcePoint" />
+              <mxPoint x="460" y="450" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="SwJW0qtiqSlybx5t45kD" name="Test7">
+    <mxGraphModel dx="1426" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Connection" condition="" default="" type="connection" id="TKhN_jLUUdeFYT9p5PEf-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="339" y="583" as="sourcePoint" />
+              <mxPoint x="489" y="583" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
