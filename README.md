@@ -1,6 +1,7 @@
 # 🧠 chartmind
 
 [![Code Style: Google][gts-badge-image]][gts-github-url]
+[![codecov][codecov-badge]][codecov-project]
 
 **chartmind** is a minimalist workflow engine that loads flowcharts from [draw.io (diagrams.net)][drawio-url] and executes the underlying classes sequentially.
 
@@ -141,3 +142,5 @@ This project is licensed under the [MIT License][license].
 [docs-rename-flowchart]: docs/images/rename-flow-chart.png
 [gts-badge-image]: https://img.shields.io/badge/code%20style-google-blueviolet.svg
 [gts-github-url]: https://github.com/google/gts
+[codecov-badge]: https://codecov.io/gh/zniptr/chartmind/graph/badge.svg
+[codecov-project]: https://codecov.io/gh/zniptr/chartmind
