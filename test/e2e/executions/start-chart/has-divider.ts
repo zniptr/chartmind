@@ -2,7 +2,7 @@ import {ChartContext} from '../../../../src/engine/chart/context/chart-context';
 import {Executable} from '../../../../src/interfaces/executable.interface';
 
 export class HasDivider implements Executable {
-  async execute(chartContext: ChartContext): Promise<void> {
+  execute(chartContext: ChartContext): void {
     const counter = chartContext.getVariable('counter') as number;
     let isPrime = true;
 

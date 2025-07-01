@@ -10,8 +10,8 @@ import {ChartContext} from '../engine/chart/context/chart-context';
  * @method execute
  * Executes the action using the provided chart context.
  * @param chartContext - The context in which the action should be executed.
- * @returns A promise that resolves when the execution is complete.
+ * @returns Returns nothing or a Promise that resolves when the action is complete.
  */
 export interface Executable {
-  execute(chartContext: ChartContext): Promise<void>;
+  execute(chartContext: ChartContext): void | Promise<void>;
 }

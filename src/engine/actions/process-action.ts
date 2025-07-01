@@ -13,10 +13,15 @@ export class ProcessAction extends BaseAction {
 
     if (Executable) {
       const instance = new Executable();
-      return instance.execute(chartContext);
+
+      const result = instance.execute(chartContext);
+      if (result instanceof Promise) {
+        await result;
+      }
     }
 
     // console.log(`SymbolProcess ${this.symbol.label} executed.`);
+    return;
   }
 
   public getNext(): SymbolChart | undefined {

@@ -2,6 +2,8 @@ import {ChartManager} from '../../src/engine/chart/manager/chart-manager';
 import {ExecutableRegistry} from '../../src/engine/registry/executable-registry';
 import {HasDivider} from './executions/start-chart/has-divider';
 import {IncrementCounter} from './executions/start-chart/increment-counter';
+import {AddHelloWorld} from './executions/start-chart/add-hello-world';
+import {AddHelloWorldAsync} from './executions/start-chart/add-hello-world-async';
 import {SetIsPrimeFalse} from './executions/start-chart/set-is-prime-false';
 
 describe('ChartManager (E2E)', () => {
@@ -13,7 +15,9 @@ describe('ChartManager (E2E)', () => {
     ExecutableRegistry.instance
       .addExecutable('increment-counter', IncrementCounter)
       .addExecutable('set-is-prime-false', SetIsPrimeFalse)
-      .addExecutable('has-divider', HasDivider);
+      .addExecutable('has-divider', HasDivider)
+      .addExecutable('add-hello-world', AddHelloWorld)
+      .addExecutable('add-hello-world-async', AddHelloWorldAsync);
   });
 
   it('should throw an error if the chart does not exist', async () => {
@@ -81,8 +85,24 @@ describe('ChartManager (E2E)', () => {
         ['isPrime', true],
       ]),
     },
+    {
+      chartName: 'Test6',
+      actualContext: new Map(),
+      expectedContext: new Map([
+        ['helloWorldAsync', 'Hello World Async!'],
+        ['helloWorld', 'Hello World!'],
+      ]),
+    },
+    {
+      chartName: 'Test7',
+      actualContext: new Map(),
+      expectedContext: new Map([
+        ['helloWorld', 'Hello World!'],
+        ['helloWorldAsync', 'Hello World Async!'],
+      ]),
+    },
   ])(
-    'should execute the chart without validation messages and errors',
+    'should execute all executables without validation messages and errors',
     async ({chartName, actualContext, expectedContext}) => {
       const logSpy = jest.spyOn(console, 'log');
 
@@ -90,7 +110,12 @@ describe('ChartManager (E2E)', () => {
       await expect(
         chartManager.startProcess(chartName, actualContext),
       ).resolves.not.toThrow();
-      expect(actualContext).toEqual(expectedContext);
+
+      // Transform values of maps into arrays to check the order
+      const actualArray = Array.from(actualContext.values());
+      const expectedArray = Array.from(expectedContext.values());
+
+      expect(actualArray).toEqual(expectedArray);
       expect(logSpy).not.toHaveBeenCalled();
     },
   );

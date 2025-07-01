@@ -55,12 +55,29 @@ describe('ProcessAction', () => {
       await expect(action.execute(chartContext)).resolves.not.toThrow();
     });
 
-    it('should call and execute the executable if found in registry', async () => {
+    it('should call and execute the async executable if found in registry', async () => {
       const chartContext = {
         context: new Map(),
       } as unknown as ChartContext;
       const mockExecutable = jest.fn().mockImplementation(() => ({
         execute: jest.fn().mockResolvedValue(undefined),
+      }));
+
+      jest
+        .spyOn(ExecutableRegistry.instance, 'getExecutableByName')
+        .mockReturnValue(mockExecutable);
+
+      await action.execute(chartContext);
+
+      expect(mockExecutable).toHaveBeenCalled();
+    });
+
+    it('should call and execute the executable if found in registry', async () => {
+      const chartContext = {
+        context: new Map(),
+      } as unknown as ChartContext;
+      const mockExecutable = jest.fn().mockImplementation(() => ({
+        execute: jest.fn().mockReturnValue(undefined),
       }));
 
       jest
