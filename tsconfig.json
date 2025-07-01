@@ -5,9 +5,8 @@
     "outDir": "build"
   },
   "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "src/**/*.test.ts"
+    "src/**/*.ts",
+    "test/**/*.test.ts",
+    "test/**/*.ts"
   ]
 }

@@ -9,7 +9,7 @@
 ## Features
 - Custom draw.io symbol library tailored for use with chartmind
 - Interpret flowcharts as executable workflows
-- Support for start, end, connection, decisions, custom and predefined actions symbols
+- Support for start, end, connection, decision, custom and predefined action symbols
 - Built-in validator for flowchart development
 
 ---
@@ -107,7 +107,7 @@ async function start() {
 
 > 🧪 **Tip:** You can validate your charts before runtime to catch misconfigured symbols early.
 
-The complete example can be viewed and run [here][example].
+The complete example can be viewed and run [here][example]. Additionally, the `test` folder contains several E2E tests. Specifically, for validating charts, you can refer to [this][example-test-validate] test, and for executing charts, [this][example-test-start] one may be helpful.
 
 ---
 
@@ -130,10 +130,11 @@ Only the `type` field is already filled — the rest must be completed manually 
 
 This project is licensed under the [MIT License][license].
 
-
 [license]: LICENSE
 [symbol-library]: flow-chart.xml
 [drawio-url]: https://draw.io
+[example-test-start]: test/e2e/start-chart.test.ts
+[example-test-validate]: test/e2e/validate-chart.test.ts
 [example]: examples/getting-started
 [docs-flow-chart]: docs/images/flow-chart.png
 [docs-process-symbol-settings]: docs/images/process-symbol-settings.png
