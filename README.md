@@ -63,7 +63,7 @@ Save the diagram somewhere in your project, for example under a folder called `c
 
 Now, implement your classes and register them in the registry. Then you can start the flowchart by its name. The following example demonstrates how:
 
-📄**increment-counter-task.ts**
+📄**increment-counter.ts**
 ```ts
 import { ChartContext, Executable } from 'chartmind';
 
