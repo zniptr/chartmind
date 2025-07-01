@@ -1,6 +1,6 @@
 {
   "name": "chartmind",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flowchart execution engine for drawio charts",
   "main": "build/src/index.js",
   "module": "build/src/index.js",
