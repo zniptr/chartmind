@@ -3,12 +3,18 @@ import {SymbolStart} from '../../interfaces/symbol-start.interface';
 import {SymbolChart} from '../../types/symbol-chart.type';
 
 export class Chart {
+  private _id: string;
   private _name: string;
   private _symbols: SymbolChart[];
 
-  constructor(name: string, symbols: SymbolChart[]) {
+  constructor(id: string, name: string, symbols: SymbolChart[]) {
+    this._id = id;
     this._name = name;
     this._symbols = symbols;
+  }
+
+  public get id(): string {
+    return this._id;
   }
 
   public get name(): string {

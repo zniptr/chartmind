@@ -6,9 +6,15 @@ import {BaseAction} from './base-action';
 export class PredefinedProcessAction extends BaseAction {
   public async execute(chartContext: ChartContext): Promise<void> {
     const predefinedProcess = this.symbol as SymbolPredefinedProcess;
-    const name = predefinedProcess.name;
+    const linkedChart = predefinedProcess.link;
+    const parts = linkedChart.split(',');
 
-    return this.chartManager.startProcess(name, chartContext.context);
+    if (parts.length === 2) {
+      await this.chartManager.startChartInstanceById(
+        parts[1],
+        chartContext.context,
+      );
+    }
 
     // console.log(`SymbolPredefinedProcess ${this.symbol.label} executed.`);
   }

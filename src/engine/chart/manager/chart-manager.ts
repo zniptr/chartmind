@@ -99,18 +99,7 @@ export class ChartManager {
     return this;
   }
 
-  /**
-   * Starts the execution process for a chart by its name.
-   *
-   * Retrieves the chart definition by the provided name, creates a new chart context and instance,
-   * and initiates the chart's execution. Throws an error if the chart name is unknown.
-   *
-   * @param name - The unique name of the chart to start.
-   * @param context - A map containing context data to be passed to the chart.
-   * @returns A promise that resolves when the chart process has completed.
-   * @throws {Error} If the specified chart name does not exist.
-   */
-  public async startProcess(
+  public async startChartInstanceByName(
     name: string,
     context: Map<String, unknown>,
   ): Promise<void> {
@@ -120,6 +109,28 @@ export class ChartManager {
       throw new Error(`unknown chart name ${name}`);
     }
 
+    return this.startChart(chart, context);
+  }
+
+  public async startChartInstanceById(
+    id: string,
+    context: Map<String, unknown>,
+  ): Promise<void> {
+    const charts = this.charts.values();
+
+    for (const chart of charts) {
+      if (chart.id === id) {
+        return this.startChart(chart, context);
+      }
+    }
+
+    throw new Error(`unknown chart id ${id}`);
+  }
+
+  private async startChart(
+    chart: Chart,
+    context: Map<String, unknown>,
+  ): Promise<void> {
     const chartContext = new ChartContext(context);
     const chartInstance = new ChartInstance(chartContext, chart, this);
 

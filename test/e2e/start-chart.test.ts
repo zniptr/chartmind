@@ -22,13 +22,13 @@ describe('ChartManager (E2E)', () => {
 
   it('should throw an error if the chart does not exist', async () => {
     await expect(() =>
-      chartManager.startProcess('Test 0', new Map()),
+      chartManager.startChartInstanceByName('Test 0', new Map()),
     ).rejects.toThrow('unknown chart name Test 0');
   });
 
   it('should throw an error if chart is empty', async () => {
     await expect(() =>
-      chartManager.startProcess('Test 1', new Map()),
+      chartManager.startChartInstanceByName('Test 1', new Map()),
     ).rejects.toThrow('unknown chart name Test 1');
   });
 
@@ -108,7 +108,7 @@ describe('ChartManager (E2E)', () => {
 
       chartManager.validateChartByName(chartName);
       await expect(
-        chartManager.startProcess(chartName, actualContext),
+        chartManager.startChartInstanceByName(chartName, actualContext),
       ).resolves.not.toThrow();
 
       // Transform values of maps into arrays to check the order

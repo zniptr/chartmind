@@ -3,7 +3,7 @@ import {Chart} from '../../../../src/engine/chart/chart';
 describe('Chart', () => {
   describe('name', () => {
     it('should return the name', () => {
-      const chart = new Chart('test', []);
+      const chart = new Chart('', 'test', []);
 
       const result = chart.name;
 
@@ -13,7 +13,7 @@ describe('Chart', () => {
 
   describe('symbols', () => {
     it('should return the symbols', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {id: '1', type: 'start', label: 'test'},
       ]);
 
@@ -25,7 +25,7 @@ describe('Chart', () => {
 
   describe('getStartSymbol', () => {
     it('should return undefined if no start symbol exists', () => {
-      const chart = new Chart('test', []);
+      const chart = new Chart('', 'test', []);
 
       const result = chart.getStartSymbol();
 
@@ -33,7 +33,7 @@ describe('Chart', () => {
     });
 
     it('should return the start symbol', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {id: '1', type: 'start', label: 'test'},
         {id: '2', type: 'end', label: 'test'},
       ]);
@@ -46,7 +46,7 @@ describe('Chart', () => {
 
   describe('getSymbolById', () => {
     it('should return undefined if no symbol with corresponding id exists', () => {
-      const chart = new Chart('test', []);
+      const chart = new Chart('', 'test', []);
 
       const result = chart.getSymbolById('1');
 
@@ -54,7 +54,7 @@ describe('Chart', () => {
     });
 
     it('should return the symbol with the corresponding id', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {id: '1', type: 'start', label: 'test'},
         {id: '2', type: 'end', label: 'test'},
       ]);
@@ -67,7 +67,7 @@ describe('Chart', () => {
 
   describe('getConnectionsBySourceId', () => {
     it('should return no connections if no symbol with corresponding source id exists', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',
@@ -88,7 +88,7 @@ describe('Chart', () => {
     });
 
     it('should return connections with the corresponding source id', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',
@@ -118,7 +118,7 @@ describe('Chart', () => {
 
   describe('getConnectionByTargetId', () => {
     it('should return no connection if no symbol with corresponding target id exists', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',
@@ -139,7 +139,7 @@ describe('Chart', () => {
     });
 
     it('should return the connection with the corresponding target id', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',
@@ -167,7 +167,7 @@ describe('Chart', () => {
 
   describe('getConnectionBySourceId', () => {
     it('should return no connection if no symbol with corresponding source id exists', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',
@@ -188,7 +188,7 @@ describe('Chart', () => {
     });
 
     it('should return the connection with the corresponding source id', () => {
-      const chart = new Chart('test', [
+      const chart = new Chart('', 'test', [
         {
           id: '1',
           type: 'connection',

@@ -14,9 +14,9 @@ type PredefinedProcessActionFake = {
 };
 
 describe('PredefinedProcessAction', () => {
-  const symbol = {name: 'test'} as unknown as SymbolChart;
+  const symbol = {link: 'data:page/id,123'} as unknown as SymbolChart;
   const chartManager = {
-    startProcess: jest.fn(),
+    startChartInstanceById: jest.fn(),
   } as unknown as ChartManager;
   const chart = {
     name: '',
@@ -41,13 +41,13 @@ describe('PredefinedProcessAction', () => {
       const chartContext = {
         context: new Map(),
       } as unknown as ChartContext;
-      const startProcessSpy = jest
-        .spyOn(action.chartManager, 'startProcess')
+      const startChartInstanceByIdSpy = jest
+        .spyOn(action.chartManager, 'startChartInstanceById')
         .mockResolvedValue(undefined);
 
       await expect(action.execute(chartContext)).resolves.not.toThrow();
-      expect(startProcessSpy).toHaveBeenCalledWith(
-        'test',
+      expect(startChartInstanceByIdSpy).toHaveBeenCalledWith(
+        '123',
         chartContext.context,
       );
     });

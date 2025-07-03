@@ -40,7 +40,15 @@ type ChartManagerFake = {
   createChart(diagram: ParsedDiagram): void;
   validateCharts(): ChartManager;
   validateChartByName(name: string): ChartManager;
-  startProcess(name: string, context: Map<String, unknown>): Promise<void>;
+  startChartInstanceByName(
+    name: string,
+    context: Map<String, unknown>,
+  ): Promise<void>;
+  startChartInstanceById(
+    id: string,
+    context: Map<String, unknown>,
+  ): Promise<void>;
+  startChart(chart: Chart, context: Map<String, unknown>): Promise<void>;
 };
 
 describe('ChartManager', () => {
@@ -94,6 +102,7 @@ describe('ChartManager', () => {
 
     it('should create diagrams if diagrams are parsed', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: []}},
         name: '',
       };
@@ -113,6 +122,7 @@ describe('ChartManager', () => {
   describe('createChart', () => {
     it('should not create a chart if no chart is parsed', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: []}},
         name: '',
       };
@@ -127,6 +137,7 @@ describe('ChartManager', () => {
 
     it('should create a chart if a chart is parsed', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: []}},
         name: 'test',
       };
@@ -192,9 +203,9 @@ describe('ChartManager', () => {
   describe('startProcess', () => {
     it('should throw an error if the chart does not exist', async () => {
       const context = new Map();
-      await expect(chartManager.startProcess('test', context)).rejects.toThrow(
-        'unknown chart name test',
-      );
+      await expect(
+        chartManager.startChartInstanceByName('test', context),
+      ).rejects.toThrow('unknown chart name test');
     });
 
     it('should create ChartContext and ChartInstance and call run', async () => {
@@ -205,9 +216,9 @@ describe('ChartManager', () => {
         symbols: [],
       } as unknown as Chart);
 
-      expect(await chartManager.startProcess('test', context)).toEqual(
-        undefined,
-      );
+      expect(
+        await chartManager.startChartInstanceByName('test', context),
+      ).toEqual(undefined);
     });
   });
 });

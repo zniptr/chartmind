@@ -28,7 +28,7 @@ export class ChartContext {
    * @param value - The value to associate with the variable name.
    */
   public setVariable(name: string, value: unknown): void {
-    this._context.set(name, value);
+    this.context.set(name, value);
   }
 
   /**
@@ -38,6 +38,6 @@ export class ChartContext {
    * @returns The value associated with the variable name, or `undefined` if not found.
    */
   public getVariable(name: string): unknown {
-    return this._context.get(name);
+    return this.context.get(name);
   }
 }

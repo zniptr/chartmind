@@ -35,6 +35,7 @@ describe('ChartParser', () => {
     it('should parse diagrams', () => {
       const parsedDiagramsMock: ParsedDiagram[] = [
         {
+          id: '',
           mxGraphModel: {root: {object: []}},
           name: 'test',
         },
@@ -109,6 +110,7 @@ describe('ChartParser', () => {
   describe('parseChart', () => {
     it('should return undefined if the parsed diagram is not valid', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: []}},
         name: '',
       };
@@ -121,6 +123,7 @@ describe('ChartParser', () => {
 
     it('should return a chart if the parsed diagram has an symbol array and is valid', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: []}},
         name: 'test',
       };
@@ -189,7 +192,7 @@ describe('ChartParser', () => {
         expectedResult: false,
       },
       {
-        diagram: {name: 'test', mxGraphModel: {root: {object: []}}},
+        diagram: {id: '', name: 'test', mxGraphModel: {root: {object: []}}},
         expectedResult: true,
       },
     ])('should validate the diagram', ({diagram, expectedResult}) => {

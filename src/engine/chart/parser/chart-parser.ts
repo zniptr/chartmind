@@ -48,13 +48,14 @@ export class ChartParser {
       return;
     }
 
-    const name: string = diagram.name;
+    const id = diagram.id;
+    const name = diagram.name;
     const symbols = diagram.mxGraphModel.root.object;
     const parsedSymbols: SymbolChart[] = Array.isArray(symbols)
       ? symbols
       : [symbols];
 
-    return new Chart(name, parsedSymbols);
+    return new Chart(id, name, parsedSymbols);
   }
 
   private isValidDiagram(diagram: ParsedDiagram): boolean {

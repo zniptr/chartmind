@@ -165,22 +165,22 @@
     </mxGraphModel>
   </diagram>
   <diagram id="3BvwfTnDv6Lf9sKuGtsl" name="Test5">
-    <mxGraphModel dx="925" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <object label="Start" type="start" id="ht4PGGvujn9JQuruN8aD-1">
-          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" parent="1" vertex="1">
             <mxGeometry x="64" y="555" width="50" height="50" as="geometry" />
           </mxCell>
         </object>
-        <object label="Check if prime counter" type="predefined" name="IsPrimeNumber" id="OZ6Tup9gGr1jfoyMqsrD-4">
-          <mxCell style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;strokeWidth=2;labelPosition=center;align=center;" vertex="1" parent="1">
+        <object label="Check if prime counter" type="predefined" link="data:page/id,-cJNidSGVdsFJDWswdg3" id="OZ6Tup9gGr1jfoyMqsrD-4">
+          <mxCell style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=process;whiteSpace=wrap;rounded=1;size=0.14;arcSize=6;strokeWidth=2;labelPosition=center;align=center;" parent="1" vertex="1">
             <mxGeometry x="204" y="545" width="126" height="70" as="geometry" />
           </mxCell>
         </object>
         <object label="" condition="" default="" type="connection" id="OZ6Tup9gGr1jfoyMqsrD-5">
-          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ht4PGGvujn9JQuruN8aD-1" target="OZ6Tup9gGr1jfoyMqsrD-4">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ht4PGGvujn9JQuruN8aD-1" target="OZ6Tup9gGr1jfoyMqsrD-4" edge="1">
             <mxGeometry relative="1" as="geometry">
               <mxPoint x="304" y="585" as="sourcePoint" />
               <mxPoint x="394" y="585" as="targetPoint" />
@@ -188,12 +188,12 @@
           </mxCell>
         </object>
         <object label="Is prime number ?" type="decision" id="OZ6Tup9gGr1jfoyMqsrD-7">
-          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxCell style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
             <mxGeometry x="414" y="550" width="60" height="60" as="geometry" />
           </mxCell>
         </object>
         <object label="" condition="" default="" type="connection" id="OZ6Tup9gGr1jfoyMqsrD-8">
-          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-4" target="OZ6Tup9gGr1jfoyMqsrD-7">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-4" target="OZ6Tup9gGr1jfoyMqsrD-7" edge="1">
             <mxGeometry relative="1" as="geometry">
               <mxPoint x="274" y="575" as="sourcePoint" />
               <mxPoint x="364" y="575" as="targetPoint" />
@@ -201,17 +201,17 @@
           </mxCell>
         </object>
         <object label="Increment counter" type="process" executable="increment-counter" id="rILLP03hhCLcdmJunbkG-1">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
             <mxGeometry x="534" y="655" width="126" height="70" as="geometry" />
           </mxCell>
         </object>
         <object label="End 1" type="end" id="bnX9gS_WcTdlSSyGXGb8-1">
-          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" parent="1" vertex="1">
             <mxGeometry x="714" y="445" width="50" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="no" condition="" default="1" type="connection" id="bnX9gS_WcTdlSSyGXGb8-2">
-          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-7" target="bnX9gS_WcTdlSSyGXGb8-1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-7" target="bnX9gS_WcTdlSSyGXGb8-1" edge="1">
             <mxGeometry relative="1" as="geometry">
               <mxPoint x="374" y="635" as="sourcePoint" />
               <mxPoint x="464" y="635" as="targetPoint" />
@@ -219,7 +219,7 @@
           </mxCell>
         </object>
         <object label="yes" condition="isPrime === true" default="" type="connection" id="35Ai8d4-77z7j5guyJGP-1">
-          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-7" target="rILLP03hhCLcdmJunbkG-1">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OZ6Tup9gGr1jfoyMqsrD-7" target="rILLP03hhCLcdmJunbkG-1" edge="1">
             <mxGeometry relative="1" as="geometry">
               <mxPoint x="374" y="635" as="sourcePoint" />
               <mxPoint x="464" y="635" as="targetPoint" />
@@ -227,12 +227,12 @@
           </mxCell>
         </object>
         <object label="End 2" type="end" id="35Ai8d4-77z7j5guyJGP-2">
-          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" vertex="1" parent="1">
+          <mxCell style="strokeWidth=5;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;spacing=2;" parent="1" vertex="1">
             <mxGeometry x="714" y="665" width="50" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="" condition="" default="" type="connection" id="35Ai8d4-77z7j5guyJGP-3">
-          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="rILLP03hhCLcdmJunbkG-1" target="35Ai8d4-77z7j5guyJGP-2">
+          <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="rILLP03hhCLcdmJunbkG-1" target="35Ai8d4-77z7j5guyJGP-2" edge="1">
             <mxGeometry relative="1" as="geometry">
               <mxPoint x="374" y="635" as="sourcePoint" />
               <mxPoint x="464" y="635" as="targetPoint" />
