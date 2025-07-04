@@ -3,6 +3,7 @@ import {Chart} from '../../../../../src/engine/chart/chart';
 import {ChartParser} from '../../../../../src/engine/chart/parser/chart-parser';
 import {ParsedChart} from '../../../../../src/interfaces/parsed-chart.interface';
 import {ParsedDiagram} from '../../../../../src/interfaces/parsed-diagram.interface';
+import {SymbolChart} from '../../../../../src/types/symbol-chart.type';
 
 jest.mock('../../../../../src/engine/chart/chart', () => ({
   Chart: jest.fn(),
@@ -118,9 +119,21 @@ describe('ChartParser', () => {
       expect(result).toBeUndefined();
     });
 
-    it('should return a chart if the parsed diagram is valid', () => {
+    it('should return a chart if the parsed diagram has an symbol array and is valid', () => {
       const parsedDiagramMock: ParsedDiagram = {
         mxGraphModel: {root: {object: []}},
+        name: 'test',
+      };
+      jest.spyOn(chartParser, 'isValidDiagram').mockReturnValue(true);
+
+      const result = chartParser.parseChart(parsedDiagramMock);
+
+      expect(result).not.toBeUndefined();
+    });
+
+    it('should return a chart if the parsed diagram has an single symbol object and is valid', () => {
+      const parsedDiagramMock: ParsedDiagram = {
+        mxGraphModel: {root: {object: {} as unknown as SymbolChart}},
         name: 'test',
       };
       jest.spyOn(chartParser, 'isValidDiagram').mockReturnValue(true);
