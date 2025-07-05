@@ -136,6 +136,7 @@ describe('ChartParser', () => {
 
     it('should return a chart if the parsed diagram has an single symbol object and is valid', () => {
       const parsedDiagramMock: ParsedDiagram = {
+        id: '',
         mxGraphModel: {root: {object: {} as unknown as SymbolChart}},
         name: 'test',
       };

@@ -14,7 +14,6 @@ type PredefinedProcessActionFake = {
 };
 
 describe('PredefinedProcessAction', () => {
-  const symbol = {link: 'data:page/id,123'} as unknown as SymbolChart;
   const chartManager = {
     startChartInstanceById: jest.fn(),
   } as unknown as ChartManager;
@@ -25,22 +24,22 @@ describe('PredefinedProcessAction', () => {
     getSymbolById: jest.fn(),
   } as unknown as Chart;
 
+  const chartContext = {
+    context: new Map(),
+  } as unknown as ChartContext;
+
   let action: PredefinedProcessActionFake;
 
-  beforeEach(
-    () =>
-      (action = new PredefinedProcessAction({
+  describe('execute', () => {
+    it('should start a new chart instance when the link contains a valid chart id', async () => {
+      const symbol = {link: 'data:page/id,123'} as unknown as SymbolChart;
+
+      action = new PredefinedProcessAction({
         chart,
         chartManager,
         symbol,
-      }) as unknown as PredefinedProcessActionFake),
-  );
+      }) as unknown as PredefinedProcessActionFake;
 
-  describe('execute', () => {
-    it('should call predefined process by name', async () => {
-      const chartContext = {
-        context: new Map(),
-      } as unknown as ChartContext;
       const startChartInstanceByIdSpy = jest
         .spyOn(action.chartManager, 'startChartInstanceById')
         .mockResolvedValue(undefined);
@@ -50,10 +49,40 @@ describe('PredefinedProcessAction', () => {
         '123',
         chartContext.context,
       );
+
+      startChartInstanceByIdSpy.mockReset();
+    });
+
+    it('should not start a new chart instance when the link format is invalid', async () => {
+      const symbol = {link: 'test'} as unknown as SymbolChart;
+
+      action = new PredefinedProcessAction({
+        chart,
+        chartManager,
+        symbol,
+      }) as unknown as PredefinedProcessActionFake;
+
+      const startChartInstanceByIdSpy = jest
+        .spyOn(action.chartManager, 'startChartInstanceById')
+        .mockResolvedValue(undefined);
+
+      await expect(action.execute(chartContext)).resolves.not.toThrow();
+      expect(startChartInstanceByIdSpy).not.toHaveBeenCalled();
     });
   });
 
   describe('getNext', () => {
+    const symbol = {} as unknown as SymbolChart;
+
+    beforeEach(
+      () =>
+        (action = new PredefinedProcessAction({
+          chart,
+          chartManager,
+          symbol,
+        }) as unknown as PredefinedProcessActionFake),
+    );
+
     it('should return undefined if no next symbol was found', () => {
       jest
         .spyOn(action.chart, 'getConnectionBySourceId')

@@ -200,25 +200,78 @@ describe('ChartManager', () => {
     });
   });
 
-  describe('startProcess', () => {
-    it('should throw an error if the chart does not exist', async () => {
+  describe('startChartInstanceByName', () => {
+    it('should throw an error when trying to start a chart instance by a non-existent name', async () => {
       const context = new Map();
       await expect(
         chartManager.startChartInstanceByName('test', context),
       ).rejects.toThrow('unknown chart name test');
     });
 
-    it('should create ChartContext and ChartInstance and call run', async () => {
-      const context = new Map();
-
-      chartManager.charts.set('test', {
+    it('should call startChart with the chart found by name', async () => {
+      const chart = {
         name: '',
         symbols: [],
-      } as unknown as Chart);
+      } as unknown as Chart;
+      const context = new Map();
+      const startChartSpy = jest
+        .spyOn(chartManager, 'startChart')
+        .mockResolvedValue(undefined);
 
-      expect(
-        await chartManager.startChartInstanceByName('test', context),
-      ).toEqual(undefined);
+      chartManager.charts.set('test', chart);
+
+      await chartManager.startChartInstanceByName('test', context);
+
+      expect(startChartSpy).toHaveBeenCalledWith(chart, context);
+    });
+  });
+
+  describe('startChartInstanceById', () => {
+    it('should throw an error when trying to start a chart instance by a non-existent id', async () => {
+      const chart = {
+        id: 'abc',
+        name: '',
+        symbols: [],
+      } as unknown as Chart;
+
+      const context = new Map();
+
+      chartManager.charts.set('test', chart);
+
+      await expect(
+        chartManager.startChartInstanceById('test', context),
+      ).rejects.toThrow('unknown chart id test');
+    });
+
+    it('should call startChart with the chart found by id', async () => {
+      const chart = {
+        id: 'test',
+        name: '',
+        symbols: [],
+      } as unknown as Chart;
+      const context = new Map();
+      const startChartSpy = jest
+        .spyOn(chartManager, 'startChart')
+        .mockResolvedValue(undefined);
+
+      chartManager.charts.set('test', chart);
+
+      await chartManager.startChartInstanceById('test', context);
+
+      expect(startChartSpy).toHaveBeenCalledWith(chart, context);
+    });
+  });
+
+  describe('startChart', () => {
+    it('should create a ChartContext and ChartInstance and call run on the instance', async () => {
+      const chart = {
+        id: 'test',
+        name: '',
+        symbols: [],
+      } as unknown as Chart;
+      const context = new Map();
+
+      expect(await chartManager.startChart(chart, context)).toEqual(undefined);
     });
   });
 });

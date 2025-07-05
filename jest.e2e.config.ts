@@ -11,6 +11,7 @@ const config: Config = {
   },
   collectCoverage: false,
   testMatch: ['<rootDir>/test/e2e/**/*.(spec|test).[tj]s'],
+  preset: 'ts-jest'
 };
 
 export default config;

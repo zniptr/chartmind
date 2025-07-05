@@ -1,6 +1,16 @@
 import {Chart} from '../../../../src/engine/chart/chart';
 
 describe('Chart', () => {
+  describe('id', () => {
+    it('should return the id', () => {
+      const chart = new Chart('test', '', []);
+
+      const result = chart.id;
+
+      expect(result).toEqual('test');
+    });
+  });
+
   describe('name', () => {
     it('should return the name', () => {
       const chart = new Chart('', 'test', []);

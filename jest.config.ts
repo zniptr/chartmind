@@ -1,3 +1,7 @@
+/**
+ * This Jest configuration file is primarily for the VS Code extension.
+ */
+
 import { Config } from 'jest';
 import { createDefaultPreset } from 'ts-jest';
 
@@ -9,12 +13,8 @@ const config: Config = {
   transform: {
     ...tsJestTransformCfg,
   },
-  collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.ts',
-    '!src/index.ts'
-  ],
-  testMatch: ['<rootDir>/test/unit/**/*.(spec|test).[tj]s'],
+  collectCoverage: false,
+  testMatch: ['<rootDir>/test/**/*.(spec|test).[tj]s'],
   preset: 'ts-jest'
 };
 

@@ -2,3 +2,4 @@ build/
 examples/
 jest.unit.config.ts
 jest.e2e.config.ts
+jest.config.ts
