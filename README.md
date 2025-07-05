@@ -112,6 +112,20 @@ The complete example can be viewed and run [here][example]. Additionally, the `t
 
 ---
 
+## Predefined Process Linking
+
+You can reuse existing charts within other charts by using the `Predefined Process` symbol.
+
+![Predefined process symbol][docs-predefined-process-symbol]
+
+To execute another chart, right-click the symbol in draw.io and select `Edit Link...`. In the dialog that appears, you can choose another chart to link.
+
+![Process linking dialog][docs-process-linking]
+
+In the background, the corresponding chart ID is stored in the symbol. The engine then executes the chart with the specified ID.
+
+---
+
 ## Symbol Properties
 
 The following table describes the available symbol properties, on which symbols these can be used, valid values, and descriptions:
@@ -122,7 +136,6 @@ type     | Start, End, Connection, Decision, Process, Predefined process | start
 condition | Connection | e.g. counter % 2 === 0 or text === 'foo' | Controls the flow from a decision symbol. Every connection must have a condition except the one marked as default. | All outgoing connections from a decision symbol must have a condition, except the one marked as default.
 default | Connection | 1 | Marks a connection as the default path. If all other conditions evaluate to false, this path is taken. Only one default should exist. | At least one outgoing connection from a decision symbol must be marked as the default.
 executable | Process | e.g. increment-counter | Key for the class registered in the registry. | Always
-name | Predefined process | e.g. Test Chart | Name of the flowchart to execute (as defined in draw.io).	 | Always
 
 All of these properties are pre-configured in the provided symbol library.
 Only the `type` field is already filled — the rest must be completed manually for each symbol.
@@ -140,6 +153,8 @@ This project is licensed under the [MIT License][license].
 [docs-flow-chart]: docs/images/flow-chart.png
 [docs-process-symbol-settings]: docs/images/process-symbol-settings.png
 [docs-rename-flowchart]: docs/images/rename-flow-chart.png
+[docs-predefined-process-symbol]: docs/images/predefined-process-symbol.png
+[docs-process-linking]: docs/images/process-linking.png
 [gts-badge-image]: https://img.shields.io/badge/code%20style-google-blueviolet.svg
 [gts-github-url]: https://github.com/google/gts
 [codecov-badge]: https://codecov.io/gh/zniptr/chartmind/graph/badge.svg
