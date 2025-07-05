@@ -1,5 +1,6 @@
 # 🧠 chartmind
 
+[![NPM Version][npm-chartmind-version]][npm-chartmind-url]
 [![Code Style: Google][gts-badge-image]][gts-github-url]
 [![codecov][codecov-badge]][codecov-project]
 
@@ -159,3 +160,5 @@ This project is licensed under the [MIT License][license].
 [gts-github-url]: https://github.com/google/gts
 [codecov-badge]: https://codecov.io/gh/zniptr/chartmind/graph/badge.svg
 [codecov-project]: https://codecov.io/gh/zniptr/chartmind
+[npm-chartmind-version]: https://img.shields.io/npm/v/chartmind
+[npm-chartmind-url]: https://www.npmjs.com/package/chartmind
