@@ -1,6 +1,6 @@
 {
   "name": "chartmind",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Flowchart execution engine for drawio charts",
   "main": "build/src/index.js",
   "module": "build/src/index.js",
@@ -20,10 +20,14 @@
   "keywords": [
     "flow",
     "chart",
+    "flowchart",
     "drawio",
     "draw",
     "diagram",
-    "engine"
+    "diagrams",
+    "engine",
+    "workflow",
+    "typescript"
   ],
   "repository": {
     "type": "git",
@@ -33,6 +37,7 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
+    "@types/he": "^1.2.3",
     "@types/jest": "^29.5.14",
     "gts": "^6.0.2",
     "jest": "^30.0.0",
@@ -41,7 +46,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.2.5"
+    "fast-xml-parser": "^5.2.5",
+    "he": "^1.2.0"
   },
   "files": [
     "build/src"

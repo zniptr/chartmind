@@ -99,6 +99,17 @@ export class ChartManager {
     return this;
   }
 
+  /**
+   * Starts a chart instance by its registered name.
+   *
+   * Looks up the chart by the provided name and, if found, starts the chart instance
+   * using the given context. Throws an error if the chart name is unknown.
+   *
+   * @param name - The name of the chart to start.
+   * @param context - A map containing context data to be passed to the chart instance.
+   * @returns A promise that resolves when the chart instance has been started.
+   * @throws {Error} If the chart with the specified name does not exist.
+   */
   public async startChartInstanceByName(
     name: string,
     context: Map<String, unknown>,
@@ -112,6 +123,18 @@ export class ChartManager {
     return this.startChart(chart, context);
   }
 
+  /**
+   * Starts a chart instance by its unique identifier.
+   *
+   * Iterates through the available charts and, if a chart with the specified `id` is found,
+   * starts the chart using the provided execution `context`. If no chart with the given `id`
+   * exists, an error is thrown.
+   *
+   * @param id - The unique identifier of the chart to start.
+   * @param context - A map containing contextual information required to start the chart.
+   * @returns A promise that resolves when the chart has been started, or rejects if the chart ID is unknown.
+   * @throws {Error} If no chart with the specified `id` is found.
+   */
   public async startChartInstanceById(
     id: string,
     context: Map<String, unknown>,

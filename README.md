@@ -98,7 +98,7 @@ async function start() {
           ['counter', 1]
       ]);
 
-      await chartManager.startProcess(chartName, chartContext);
+      await chartManager.startChartInstanceByName(chartName, chartContext);
 
       console.log(chartContext.get('counter')); // Output: 2
   } catch(error: unknown) {
@@ -131,12 +131,13 @@ In the background, the corresponding chart ID is stored in the symbol. The engin
 
 The following table describes the available symbol properties, on which symbols these can be used, valid values, and descriptions:
 
-Name     | Symbol(s)                | Possible Values         | Description           | Required 
----------|------------------------|-------------------------|-----------------------|:----------:
-type     | Start, End, Connection, Decision, Process, Predefined process | start, end, connection, decision, process, predefined  | Defines how the symbol will be interpreted by the engine. | Always
-condition | Connection | e.g. counter % 2 === 0 or text === 'foo' | Controls the flow from a decision symbol. Every connection must have a condition except the one marked as default. | All outgoing connections from a decision symbol must have a condition, except the one marked as default.
-default | Connection | 1 | Marks a connection as the default path. If all other conditions evaluate to false, this path is taken. Only one default should exist. | At least one outgoing connection from a decision symbol must be marked as the default.
-executable | Process | e.g. increment-counter | Key for the class registered in the registry. | Always
+Name     | Symbol(s)                | Possible Values         | Description
+---------|------------------------|-------------------------|-----------------------
+type     | Start, End, Connection, Decision, Process, Predefined process | start, end, connection, decision, process, predefined  | Defines how the symbol will be interpreted by the engine.
+condition | Connection | e.g. counter % 2 === 0 or text === 'foo' | Controls the flow from a `decision` symbol. All outgoing connections must have a condition, except the one marked as default.
+default | Connection | 1 | Controls the flow from a `decision` symbol. Marks a connection as the default path. If all other conditions evaluate to false, this path is taken. Just one outgoing connection must be marked as the default.
+executable | Process | e.g. increment-counter | Key for the class registered in the registry.
+data | Process | any data in JSON format | Is added to the context before the class is executed. These values are not removed after execution but remain in the context until the chart is completed.
 
 All of these properties are pre-configured in the provided symbol library.
 Only the `type` field is already filled — the rest must be completed manually for each symbol.

@@ -5,6 +5,11 @@ import {ChartContext} from '../../../../src/engine/chart/context/chart-context';
 import {ChartManager} from '../../../../src/engine/chart/manager/chart-manager';
 import {ExecutableRegistry} from '../../../../src/engine/registry/executable-registry';
 import {ProcessAction} from '../../../../src/engine/actions/process-action';
+import * as he from 'he';
+
+jest.mock('he', () => ({
+  decode: jest.fn(),
+}));
 
 jest.mock('./../../../../src/engine/registry/executable-registry', () => ({
   ExecutableRegistry: {
@@ -19,6 +24,7 @@ type ProcessActionFake = {
   chart: Chart;
   chartManager: ChartManager;
   execute(chartContext: ChartContext): Promise<void>;
+  addDataToContext(data: string | undefined, chartContext: ChartContext): void;
   getNext(): SymbolChart | undefined;
 };
 
@@ -51,6 +57,7 @@ describe('ProcessAction', () => {
       jest
         .spyOn(ExecutableRegistry.instance, 'getExecutableByName')
         .mockReturnValue(undefined);
+      jest.spyOn(action, 'addDataToContext').mockImplementation(jest.fn());
 
       await expect(action.execute(chartContext)).resolves.not.toThrow();
     });
@@ -66,6 +73,7 @@ describe('ProcessAction', () => {
       jest
         .spyOn(ExecutableRegistry.instance, 'getExecutableByName')
         .mockReturnValue(mockExecutable);
+      jest.spyOn(action, 'addDataToContext').mockImplementation(jest.fn());
 
       await action.execute(chartContext);
 
@@ -83,10 +91,69 @@ describe('ProcessAction', () => {
       jest
         .spyOn(ExecutableRegistry.instance, 'getExecutableByName')
         .mockReturnValue(mockExecutable);
+      jest.spyOn(action, 'addDataToContext').mockImplementation(jest.fn());
 
       await action.execute(chartContext);
 
       expect(mockExecutable).toHaveBeenCalled();
+    });
+  });
+
+  describe('addDataToContext', () => {
+    it('should add no data to context if no data available', () => {
+      const values = new Map([
+        ['test1', 'test1'],
+        ['test2', 'test2'],
+      ]);
+      const chartContext = {
+        context: values,
+      } as unknown as ChartContext;
+
+      action.addDataToContext(undefined, chartContext);
+
+      expect(chartContext.context).toBe(values);
+    });
+
+    it('should add no data to context if data is empty', () => {
+      const values = new Map([
+        ['test1', 'test1'],
+        ['test2', 'test2'],
+      ]);
+      const chartContext = {
+        context: values,
+      } as unknown as ChartContext;
+
+      action.addDataToContext('', chartContext);
+
+      expect(chartContext.context).toBe(values);
+    });
+
+    it('should throw an error if no json data was provided', () => {
+      const chartContext = {
+        context: new Map(),
+      } as unknown as ChartContext;
+
+      const data = 'test';
+      jest.spyOn(he, 'decode').mockReturnValue(data);
+
+      expect(() => action.addDataToContext(data, chartContext)).toThrow(
+        'Unexpected token \'e\', "test" is not valid JSON',
+      );
+    });
+
+    it('should add variables to context', () => {
+      const chartContext = {
+        context: new Map(),
+        setVariable: jest.fn(),
+      } as unknown as ChartContext;
+
+      const data = '{ "test": "test" }';
+      const setVariableSpy = jest.spyOn(chartContext, 'setVariable');
+      jest.spyOn(he, 'decode').mockReturnValue(data);
+
+      action.addDataToContext(data, chartContext);
+
+      expect(setVariableSpy).toHaveBeenCalledWith('test', 'test');
     });
   });
 

@@ -101,6 +101,14 @@ describe('ChartManager (E2E)', () => {
         ['helloWorldAsync', 'Hello World Async!'],
       ]),
     },
+    {
+      chartName: 'Test8',
+      actualContext: new Map(),
+      expectedContext: new Map([
+        ['test1', 'test1'],
+        ['test2', 'test2'],
+      ]),
+    },
   ])(
     'should execute all executables without validation messages and errors',
     async ({chartName, actualContext, expectedContext}) => {

@@ -17,7 +17,7 @@ async function start() {
           ['counter', 1]
       ]);
 
-      await chartManager.startProcess(chartName, chartContext);
+      await chartManager.startChartInstanceByName(chartName, chartContext);
 
       console.log(chartContext.get('counter')); // Output: 2
   } catch(error: unknown) {
